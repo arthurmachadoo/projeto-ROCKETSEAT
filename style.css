@@ -6,7 +6,7 @@
 
 :root {
   --text-color: white;
-  --bg-url: url(./assets/bg-mobile.jpg);
+  --bg-url: url(./assets/darkmob.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
@@ -16,7 +16,7 @@
 
 .light {
   --text-color: black;
-  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --bg-url: url(./assets/lightmob.jpg);
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
@@ -31,6 +31,7 @@ body {
   background-size: cover;
   height: 100vh;
 }
+
 body * {
   font-family: "Inter", sans-serif;
   color: var(--text-color);
@@ -48,7 +49,8 @@ body * {
 
 /*profile*/
 #profile {
-  text-align: center; /*alinha todos os elementos dentro da div pai*/
+  text-align: center;
+  /*alinha todos os elementos dentro da div pai*/
   padding: 24px;
 }
 
@@ -141,13 +143,22 @@ ul li a:hover {
   border: 1.5px solid var(--text-color);
 }
 
+#tecnologias {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-weight: 500;
+  font-size: 13px;
+}
+
 /*social links*/
 #social {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  padding: 24px 0;
+  padding: 3px 0;
+
 
   font-size: 24px;
 }
@@ -167,7 +178,7 @@ ul li a:hover {
 }
 
 footer {
-  padding: 24px 0;
+  padding: 3px 0;
   font-size: 12px;
   text-align: center;
   font-weight: 400;
@@ -176,10 +187,11 @@ footer {
 /*media queries*/
 @media (min-width: 700px) {
   :root {
-    --bg-url: url(./assets/bg-desktop.jpg);
+    --bg-url: url(./assets/dark.jpg);
   }
+
   .light {
-    --bg-url: url(./assets/bg-desktop-light.jpg);
+    --bg-url: url(./assets/light.jpg);
   }
 }
 
@@ -188,14 +200,17 @@ footer {
   from {
     left: 0;
   }
+
   to {
     left: 50%;
   }
 }
+
 @keyframes slide-button-back {
   from {
     left: 50%;
   }
+
   to {
     left: 0;
   }
